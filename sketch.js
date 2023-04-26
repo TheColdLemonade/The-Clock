@@ -19,7 +19,9 @@ function draw() {
   textSize(20)
   if (darkMode) fill(255,255,255, 150)
   else fill(0,0,0)
-  if (7 < hour() < 18) text("Day", width/2, height - 50)
+  if (7<hour()){
+    if (hour() < 18) text("Day", width/2, height - 50)
+    else text("Night", width/2, height - 50) }
   else text("Night", width/2, height - 50)
 }
 function analog() {
